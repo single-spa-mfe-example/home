@@ -1,5 +1,6 @@
 import Icon from "@mdi/react";
 import { mdiStar, mdiOpenInNew } from "@mdi/js";
+import mfeIcon from "./mfe-icon.svg";
 
 function MockContent() {
   return (
@@ -87,16 +88,29 @@ function HeroContent() {
   return (
     <section className="hero is-primary">
       <div className="hero-body">
-        <div className="container has-text-centered">
-          <p className="title">Example App</p>
-          <p className="subtitle">
+        <div className="container">
+          <div className="has-text-centered">
+            <h1
+              className="has-text-weight-bold is-family-primary"
+              style={{
+                backgroundImage: `linear-gradient(60deg, rgb(15 125 216), rgb(255, 176, 58))`,
+                backgroundClip: `text`,
+                WebkitBackgroundClip: `text`,
+                color: `transparent`,
+                fontSize: `8rem`,
+                display: `inline`,
+              }}
+            >
+              Example App
+            </h1>
+          </div>
+          <p className="is-size-3 is-flex is-justify-content-center is-align-content-center">
             <span>Microfrontends with </span>
-            <br />
             <a
               href="https://single-spa.js.org/"
               rel="noopener"
               target="_blank"
-              className="button is-link is-rounded"
+              className="button is-link is-rounded my-auto ml-2"
             >
               <span>Single-Spa</span>
               <span className="icon is-small">
@@ -104,6 +118,9 @@ function HeroContent() {
               </span>
             </a>
           </p>
+          <figure className="image is-128x128 mx-auto mt-3">
+            <img src={mfeIcon} alt="Microfrontends icon" />
+          </figure>
         </div>
       </div>
     </section>
